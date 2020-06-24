@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+
+/*movimiento de las ruedas*/
+
+#left-wheel {
+    animation: animacion 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#right-wheel {
+    animation: animacion 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes animacion {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+/*movimiento de la gorrra*/
+
+#men-bike {
+    animation: salto 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+@keyframes salto {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(15deg);
+    }
+}
+
+
+/*animacion del sombrero*/
+
+#hat {
+    animation: sombrero 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes sombrero {
+    from {
+        transform: translateY(0%)
+    }
+    to {
+        transform: translateY(30%) rotateZ(5deg);
+    }
+}
+
+#paint0_linear {
+    animation: fondo 1s linear infinite;
+}
+
+@keyframes fondo {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(320%);
+    }
+}
